@@ -47,7 +47,7 @@ foreach (var str in decodedList)
 
 Base64.cs: Contains the Base64 encoding and decoding logic
 
-Solution.cs: Provides array encoding/decoding utilities
+Console.cs: Provides interface to use the algorithm.
 
 🛠 Requirements
 
