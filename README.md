@@ -32,13 +32,13 @@ Console.WriteLine(decoded); // Output: 🎁
 Encoding an array of strings
 ```
 var strs = new List<string> { "🎁", "Hello" };
-string encoded = new Solution().Encode(strs);
+string encoded = Base64.MultiString.Encode(strs);
 Console.WriteLine(encoded); // Output: 8J+OgQ===SGVsbG8===
 ```
 
 Decoding an encoded string
 ```
-var decodedList = new Solution().Decode("8J+OgQ===SGVsbG8===");
+var decodedList = Base64.MultiString.Decode("8J+OgQ===SGVsbG8===");
 foreach (var str in decodedList)
     Console.WriteLine(str);
 ```
