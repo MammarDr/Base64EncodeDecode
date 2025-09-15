@@ -36,7 +36,7 @@ var decodedList = Base64.MultiString.Decode(encoded); // Output: { "🎁", "Hell
 
 Base64.cs: Contains the Base64 encoding and decoding logic
 
-Console.cs: Provides interface to use the algorithm.
+Console.cs: Provides interface(Command-Line) to use the algorithm.
 
 🛠 Requirements
 
