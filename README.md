@@ -17,30 +17,19 @@ Padding-aware decoding logic
 
 🧪 Usage
 
-Encoding a string
+Encoding & Decoding a string
 ```
-string encoded = Base64.Encode("🎁");
-Console.WriteLine(encoded); // Output: 8J+OgQ==
-```
-
-Decoding a string
-```
-string decoded = Base64.Decode("8J+OgQ==");
-Console.WriteLine(decoded); // Output: 🎁
+string encoded = Base64.Encode("🎁"); // Output: 8J+OgQ==
+string decoded = Base64.Decode(encoded); // Output: 🎁
 ```
 
-Encoding an array of strings
+
+Encoding & Decoding an array of strings
 ```
 var strs = new List<string> { "🎁", "Hello" };
-string encoded = Base64.MultiString.Encode(strs);
-Console.WriteLine(encoded); // Output: 8J+OgQ===SGVsbG8===
-```
+string encoded = Base64.MultiString.Encode(strs); // Output: 8J+OgQ===SGVsbG8===
 
-Decoding an encoded string
-```
-var decodedList = Base64.MultiString.Decode("8J+OgQ===SGVsbG8===");
-foreach (var str in decodedList)
-    Console.WriteLine(str);
+var decodedList = Base64.MultiString.Decode(encoded); // Output: { "🎁", "Hello" }
 ```
 
 📂 Structure
